@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+ <title>Code Mixed Analyses</title>
+       <link rel="stylesheet" media="screen" href ="static/bootstrap.min.css">
+       <link rel="stylesheet" href="static/bootstrap-theme.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+    font-family: Arial;
+    background-image: url("http://stuartjdavidson.com/wp-content/uploads/2015/02/12-Social-Media-Marketing-Tips-To-Master.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.alert.success {
+ color: black;
+ font-size: 27px;
+}
+
+.alert.error {
+  color: blue;
+  font-size: 17px;
+}
+* {
+    box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 40px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background: #114b1b;
+    color: white;
+    font-size:57px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+textarea {
+  width:700px;
+  height: 250px;
+}
+
+form.example button:hover {
+    background: #1a7b22;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+
+</head>
+
+ <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+ <head><title>Image Display Test
+    </title>
+    <script type="text/javascript">
+<!--
+    function showImage(){
+        document.getElementById('loadingImage').style.visibility="visible";
+    }
+
+    -->
+
+    </script>
+
+    </head>
+<body>
+
+</div>
+<marquee direction="right">
+<div class="container">
+<h1  align="center" style="color:#ff5733;"><font color="blue"><font size="6"> MIXED CODE ANALYSIS</font></h2>
+</marquee>
+<br>
+<p><h1><font color="yellow"><b>TYPE UR MSG</font></b></h1> </p>
+
+ 
+     <form action= "" method="post" role="form">
+     <textarea name="text" value="{{ request.form['text']}}"></textarea>
+     <button type="submit" value="HTML" ><font size="5">SUBMIT</font></button>
+     <button type="reset" value="Reset"><font size="5">RESET</font></button>
+      </form>
+
+
+	
+
+<br>
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert {{ category }}"> <font size="7">{{ message|capitalize }}</font> </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</br>
+<br>
+</div>
+</div>
+</body>
+</html>
